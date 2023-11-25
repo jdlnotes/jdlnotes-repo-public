@@ -1,0 +1,50 @@
+#R1
+set system root-authentication plain-text-password  
+
+set interfaces em2.0 family inet address 100.64.12.1/24
+set interfaces em3.0 family inet address 100.64.13.1/24
+set interfaces lo0.0 family inet address 1.1.1.1/32
+commit and-quit
+
+set protocols ospf area 0 interface em2.0
+set protocols ospf area 0 interface em3.0
+commit and-quit
+
+set protocols ospf area 0 interface lo0.0 passive
+commit and-quit
+
+#R2
+set system root-authentication plain-text-password  
+
+set interfaces em2.0 family inet address 100.64.12.2/24
+set interfaces em3.0 family inet address 100.64.23.2/24
+set interfaces lo0.0 family inet address 2.2.2.2/32
+commit and-quit
+
+set protocols ospf area 0 interface em2.0
+set protocols ospf area 0 interface em3.0
+commit and-quit
+
+set protocols ospf area 0 interface lo0.0 passive
+commit and-quit
+
+#R3
+set system root-authentication plain-text-password  
+
+set interfaces em3.0 family inet address 100.64.13.3/24
+set interfaces em2.0 family inet address 100.64.23.3/24
+set interfaces lo0.0 family inet address 3.3.3.3/32
+commit and-quit
+
+set protocols ospf area 0 interface em2.0
+set protocols ospf area 0 interface em3.0
+commit and-quit
+
+set protocols ospf area 0 interface lo0.0 passive
+commit and-quit
+
+#SHOW COMMANDS
+show ospf overview | match "Router ID"
+show ospf interface brief | match lo0.0
+show route protocol ospf terse 1.1.1.1
+show ospf neighbor
