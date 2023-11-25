@@ -1,0 +1,148 @@
+#R1
+
+config t
+int gig0/0
+ip address 100.64.12.1 255.255.255.252
+no shut
+ip router isis 1
+int lo0
+ip address 1.1.1.1 255.255.255.255
+router isis 1
+net 49.0000.0000.0001.00
+metric-style wide
+passive-interface loopback 0
+end
+wr
+!
+
+#R2
+
+config t
+int gig0/0
+ip address 100.64.12.2 255.255.255.252
+no shut
+ip router isis 1
+int lo0
+ip address 2.2.2.2 255.255.255.255
+int gig1/0
+ip address 100.64.23.1 255.255.255.252
+no shut
+int gig2/0
+ip address 100.64.24.1 255.255.255.252
+no shut
+router isis 1
+net 49.0000.0000.0002.00
+metric-style wide
+passive-interface loopback 0
+end
+wr
+!
+
+#R3
+
+config t
+int gig1/0
+ip address 100.64.23.2 255.255.255.252
+no shut
+ip router isis 1
+int lo0
+ip address 3.3.3.3 255.255.255.255
+int gig0/0
+ip address 100.64.34.1 255.255.255.252
+no shut
+ip router isis 1
+int gig2/0
+ip address 100.64.36.1 255.255.255.252
+no shut
+ip router isis 1
+router isis 1
+net 00.0000.0000.0003.00
+metric-style wide
+passive-interface loopback 0
+end
+wr
+!
+
+#R4
+
+config t
+ int gig2/0
+ ip address 100.64.24.2 255.255.255.252
+ no shut
+ ip router isis 1
+int lo0
+ ip address 4.4.4.4 255.255.255.255
+int gig0/0
+ ip address 100.64.34.2 255.255.255.252
+ no shut
+ ip router isis 1
+int gig3/0
+ ip address 100.64.46.1 255.255.255.252
+ no shut
+ ip router isis 1
+int gig1/0
+ ip address 100.64.45.1 255.255.255.252
+ no shut
+ ip router isis 1
+router isis 1
+ net 00.0000.0000.0004.00
+ metric-style wide
+ passive-interface loopback 0
+ end
+wr
+!
+
+#R5
+
+config t
+ int gig1/0
+ ip address 100.64.45.2 255.255.255.252
+ no shut
+ ip router isis 1
+int lo0
+ ip address 5.5.5.5 255.255.255.255
+int gig0/0
+ ip address 100.64.56.1 255.255.255.252
+ no shut
+ ip router isis 1
+int gig2/0
+ ip address 100.64.57.1 255.255.255.252
+ no shut
+ ip router isis 1
+router isis 1
+ net 00.0000.0000.0005.00
+ metric-style wide
+ passive-interface loopback 0
+ end
+wr
+!
+
+#R6
+
+config t
+ int gig0/0
+ ip address 100.64.56.2 255.255.255.252
+ no shut
+ ip router isis 1
+ int gig1/0
+ ip address 100.64.67.1 255.255.255.252
+ no shut
+ ip router isis 1
+int lo0
+ ip address 6.6.6.6 255.255.255.255
+int gig2/0
+ ip address 100.64.36.2 255.255.255.252
+ no shut
+ ip router isis 1
+int gig3/0
+ ip address 100.64.46.2 255.255.255.252
+ no shut
+ ip router isis 1
+router isis 1
+ net 00.0000.0000.0006.00
+ metric-style wide
+ passive-interface loopback 0
+ end
+wr
+!
+
