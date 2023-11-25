@@ -1,0 +1,54 @@
+#R1
+
+set system root-authentication plain-text-password  
+
+set interfaces em2.0 family inet address 100.64.12.1/24
+set interfaces lo0.0 family inet address 1.1.1.1/32
+commit and-quit
+
+set routing-options autonomous-system 65001
+set protocols bgp group EBGP neighbor 100.64.12.2 peer-as 65002
+
+##Configure EBGP to Advertise the Loopback Addresses
+edit policy-options policy-statement EBGP_ADVERTISE_LOOPBACK
+set term ADVERTISE_LO0 from protocol direct
+set term ADVERTISE_LO0 from route-filter 1.1.1.1/32 exact
+set term ADVERTISE_LO0 then accept
+top
+
+commit and-quit
+
+set protocols bgp group EBGP neighbor 100.64.12.2 export EBGP_ADVERTISE_LOOPBACK
+commit and-quit
+
+#R2
+
+set system root-authentication plain-text-password  
+
+set interfaces em2.0 family inet address 100.64.12.2/24
+set interfaces lo0.0 family inet address 2.2.2.2/32
+commit and-quit
+
+set routing-options autonomous-system 65002
+set protocols bgp group EBGP neighbor 100.64.12.1 peer-as 65001
+commit and-quit
+
+edit policy-options policy-statement EBGP_ADVERTISE_LOOPBACK
+set term ADVERTISE_LO0 from protocol direct
+set term ADVERTISE_LO0 from route-filter 2.2.2.2/32 exact
+set term ADVERTISE_LO0 then accept
+top
+commit and-quit
+
+set protocols bgp group EBGP neighbor 100.64.12.1 export EBGP_ADVERTISE_LOOPBACK
+commit and-quit
+
+
+#SHOW COMMANDS
+show configuration routing-options
+show configuration protocols bgp
+show bgp neighbor 100.64.12.1 | match Established
+show configuration policy-options
+show bgp summary
+show route receive-protocol bgp 100.64.12.2
+show route protocol bgp
