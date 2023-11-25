@@ -1,0 +1,46 @@
+ip access-list extended ICMP-ACL
+ permit icmp any any echo-reply
+ permit icmp any any ttl-exceeded
+ permit icmp any any unreachable
+ permit icmp any any echo
+ip access-list extended IPsec-ACL
+ permit esp any any
+ permit udp any eq isakmp any eq isakmp
+ip access-list extended Mgmt-ACL
+ permit udp any eq ntp any
+ permit tcp any any eq 22
+ permit tcp any eq 22 any established
+ip access-list extended Routing-ACL
+ permit tcp any eq bgp any established
+ permit eigrp any host 224.0.0.10
+ permit ospf any host 224.0.0.5
+ permit ospf any host 224.0.0.6
+ permit pim any host 224.0.0.13
+ permit igmp any any
+ 
+ ### Class map
+class-map match-any IPsec-Class
+ match access-group name IPsec-ACL
+class-map match-any Routing-Class
+ match access-group name Routing-ACL
+class-map match-any Mgmt-Class
+ match access-group name Mgmt-ACL
+class-map match-any ICMP-Class
+ match access-group name ICMP-ACL
+ 
+ policy-map CoPP-Policy
+ class ICMP-Class
+  police 8000 conform-action transmit  exceed-action drop  violate-action drop 
+ class IPsec-Class
+  police 64000 conform-action transmit  exceed-action drop  violate-action drop 
+ class Mgmt-Class
+  police 8000 conform-action transmit  exceed-action drop  violate-action drop 
+ class Routing-Class
+  police 32000 conform-action transmit  exceed-action drop  violate-action drop
+class class-default
+  police 8000 conform-action transmit  exceed-action transmit  violate-action transmit
+  
+ control-plane
+ service-policy input CoPP-Policy
+ 
+  
