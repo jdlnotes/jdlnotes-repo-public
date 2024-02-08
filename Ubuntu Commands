@@ -1,2 +1,26 @@
 sudo apt-get purge thunderbird*
 sudo apt-get autoremove --purge pidgin
+sudo apt-get remove --purge "libreoffice*"
+sudo apt-get clean
+sudo apt-get autoremove
+sudo apt-get remove --purge libreoffice\*
+
+sudo apt-get install openssh-client
+netstat -tulnp | grep ssh
+grep -i port /etc/ssh/sshd_config
+https://www.ubuntu18.com/ubuntu-change-ssh-port/
+
+sudo apt-get remove --purge openssh-server
+sudo apt-get update
+sudo apt-get install openssh-server
+sudo systemctl start ssh
+
+
+
+sudo lsof -nP -iTCP -sTCP:LISTEN -- Check listening ports
+sudo netstat -tulpn | grep <PORT#> - Check listening port
+/etc/motd - Login Banner
+/etc/hosts -- HOSTFILE
+/etc/hostname -- HOSTNAME
+/etc/resolv.conf - DNS config
+/etc/ssh/sshd_config - SSH config
