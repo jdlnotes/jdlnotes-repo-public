@@ -1,0 +1,68 @@
+#1 Design and implement a virtual network in Azure
+
+https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-virtual-networks/4-exercise-design-implement-virtual-network-azure
+
+#2 Configure domain name servers settings in Azure
+
+https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-virtual-networks/6-exercise-configure-domain-name-servers-configuration-azure
+
+#3 Connect two Azure virtual networks using global virtual network peering
+
+https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-virtual-networks/8-exercise-connect-two-azure-virtual-networks-global
+
+#4 Create and configure a virtual network gateway
+
+https://learn.microsoft.com/en-us/training/modules/design-implement-hybrid-networking/3-exercise-create-configure-local-network-gateway
+
+#5 Create a Virtual WAN by using the Azure portal
+
+https://learn.microsoft.com/en-us/training/modules/design-implement-hybrid-networking/7-exercise-create-virtual-wan-by-using-azure-portal
+
+#6 configure an ExpressRoute gateway
+
+https://learn.microsoft.com/en-us/training/modules/design-implement-azure-expressroute/4-exercise-configure-expressroute-gateway
+
+#7 provision an ExpressRoute circuit
+
+https://learn.microsoft.com/en-us/training/modules/design-implement-azure-expressroute/5-exercise-provision-expressroute-circuit
+
+#8 Create and configure an Azure load balancer
+
+https://learn.microsoft.com/en-us/training/modules/load-balancing-non-https-traffic-azure/4-exercise-create-configure-azure-load-balancer
+
+#9 Create a Traffic Manager profile using the Azure portal
+
+https://learn.microsoft.com/en-us/training/modules/load-balancing-non-https-traffic-azure/6-exercise-create-traffic-manager-profile-using-azure-portal
+
+#10 deploy Azure Application Gateway
+
+https://learn.microsoft.com/en-us/training/modules/load-balancing-https-traffic-azure/4-exercise-deploy-azure-application-gateway
+
+#11 create a Front Door for a highly available web application
+
+https://learn.microsoft.com/en-us/training/modules/load-balancing-https-traffic-azure/6-exercise-create-front-door-for-highly-available
+
+#12 Configure DDoS Protection on a virtual network using the Azure portal
+
+https://learn.microsoft.com/en-us/training/modules/design-implement-network-security-monitoring/4-exercise-configure-ddos-protection-virtual-network-using-azure-portal
+
+
+#13 Deploy and configure Azure Firewall using the Azure portal
+
+https://learn.microsoft.com/en-us/training/modules/design-implement-network-security-monitoring/7-exercise-deploy-configure-azure-firewall-using-azure-portal
+
+#14 secure your virtual hub using Azure Firewall Manager
+
+https://learn.microsoft.com/en-us/training/modules/design-implement-network-security-monitoring/9-exercise-secure-your-virtual-hub-using-azure-firewall-manager
+
+#15 Restrict network access to PaaS resources with virtual network service endpoints using the Azure portal
+
+https://learn.microsoft.com/en-us/training/modules/design-implement-private-access-to-azure-services/5-exercise-restrict-network-paas-resources-virtual-network-service-endpoints
+
+#16 Create an Azure private endpoint using Azure PowerShell
+
+https://learn.microsoft.com/en-us/training/modules/design-implement-private-access-to-azure-services/6-exercise-create-azure-private-endpoint-using-azure-powershell
+
+#17 monitor a load balancer resource using Azure monitor
+
+https://learn.microsoft.com/en-us/training/modules/design-implement-network-monitoring/3-exercise-monitor-load-balancer-resource-using-azure-monitor
