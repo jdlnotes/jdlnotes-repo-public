@@ -1,5 +1,6 @@
+sudo nano /etc/motd
 
-
+### MOTD ###
 /etc/motd - Login Banner
 /etc/hosts -- HOSTFILE
 /etc/hostname -- HOSTNAME
@@ -21,4 +22,11 @@ https://www.ubuntu18.com/ubuntu-change-ssh-port/
 sudo apt-get remove --purge openssh-server
 sudo apt-get update
 sudo apt-get install openssh-server
+sudo apt install ssh
+sudo systemctl enable ssh
 sudo systemctl start ssh
+sudo systemctl status ssh
+sudo systemctl start ssh
+sudo ufw allow ssh
+sudo ufw enable
+ssh username@your_server_ip_OR_hostname
