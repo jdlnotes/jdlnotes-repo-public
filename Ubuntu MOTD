@@ -30,3 +30,4 @@ sudo systemctl start ssh
 sudo ufw allow ssh
 sudo ufw enable
 ssh username@your_server_ip_OR_hostname
+sudo apt update && sudo apt full-upgrade -y
