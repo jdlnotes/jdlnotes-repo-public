@@ -1,0 +1,66 @@
+50 Key Abbreviations in Cyber Security 
+
+*CIA- Confidentiality, Integrity, Availability
+*IDS - Intrusion Detection System
+*IPS - Intrusion Prevention System
+*WAF - Web Application Firewall
+*PII - Personal Identifiable Information
+*DoS - Denial of Service (one source)
+*DDoS - Distributed Denial of Service (random source)
+*DNS - Domain Name System
+*ZTA - Zero Trust Architecture
+*NAT - Network Address Translation
+*CTF - Capture the Flag
+*ACL - Access Control List
+*CDN - Content Delivery Network
+*CVE - Common Vulnerabilities and Exposures
+*RAT - Remote Access Trojan
+*APT - Advanced Persistent Threat
+*ATP - Advanced Threat Protection
+*SSO - Single Sign-on
+*URL - Uniform Resource Locator
+*TLS - Transport Layer Security
+*ARP - Address Resolution Protocol
+*RDP - Remote Desktop Protocol
+*FTP - File Transfer Protocol
+*SFTP - Secure File Transfer Protocol
+*HTTP - Hypertext Transfer Protocol
+*HTTPS - Hypertext Transfer Protocol Secure
+*LDAP - Lightweight Directory Access Protocol
+*MFA - Multi-factor Authentication
+*IAM - Identity and Access Management
+*SIEM - Security Information and Event Management
+*SAM - Security Account Manager
+*MDM - Mobile Device Management
+*XXS - Cross Site Scripting
+*XSRF - Cross Site Request Forgery
+*DRaaS - Disaster Recovery as a Service
+*DLP - Data Loss Prevention
+*TCP - Transmission Control Protocol
+*SNMP - Simple Network Management Protocol
+*L2TP - Layer 2 Tunneling Protocol
+*SOC - Security Operations Center
+*EDR - Endpoint Detection and Response
+*MDR - Managed Detection and Response
+*KMS - Key Management Service
+*TOR - The Onion Router
+*UEBA - User and Entity Behavior Analytics
+*UEFI - Unified Extensible Firmware Interface
+*RFI - Remote File Inclusion
+*SSID - Service Set Identifier
+*LAN - Local Area Network
+*WAN - Wide Area Network
+*VLAN - Virtual Local Area Network
+*PGP - Pretty Good Privacy
+*MiTM - Man in the Middle Attack
+*CA - Certificate Authority
+*MAC - Mandatory Access Control
+*PUA - Potential Unwanted Application
+*ECDH - Elliptic Curve Deffie-Hellman
+*BYOD - Bring Your Own Device
+*GDPR - General Data Protection Regulation
+*ADFS - Active Directory Federation Service
+*EPP - Endpoint Protection Platform
+*DMARC - Domain Based Message Authentication, Reporting and Conformance
+*UAC - User Account Control
+*CLI - Command Line Interface
