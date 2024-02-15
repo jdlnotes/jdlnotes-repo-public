@@ -12,9 +12,8 @@ sudo netstat -tulpn | grep <PORT#> - Check listening port
 sudo apt-get purge thunderbird*
 sudo apt-get autoremove --purge pidgin
 sudo apt-get remove --purge "libreoffice*"
-sudo apt-get clean
-sudo apt-get autoremove
 sudo apt-get remove --purge libreoffice\*
+sudo apt autoclean && sudo apt autoremove
 sudo apt-get install openssh-client
 netstat -tulnp | grep ssh
 grep -i port /etc/ssh/sshd_config
@@ -31,3 +30,4 @@ sudo ufw allow ssh
 sudo ufw enable
 ssh username@your_server_ip_OR_hostname
 sudo apt update && sudo apt full-upgrade -y
+sudo snap remove --purge firefox
