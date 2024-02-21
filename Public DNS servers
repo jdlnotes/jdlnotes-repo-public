@@ -1,6 +1,19 @@
 A public DNS server is a DNS server that is available to the general public and can be used as an alternative to your Internet Service Provider's DNS server. Some popular public DNS servers include:
+
 Google DNS (8.8.8.8 and 8.8.4.4)
+
 Cloudflare DNS (1.1.1.1 and 1.0.0.1)
-OpenDNS (208.67.222.222 and 208.67.220.220)
+
+Enterprise OpenDNS: 
+208.67.222.222
+208.67.220.220
+
+Home FamilyShield OpenDNS:
+208.67.222.123
+208.67.220.123
+
+Test if working: https://welcome.opendns.com/oops/
+
 Quad9 DNS (9.9.9.9 and 149.112.112.112)
+
 These public DNS servers are known for their reliability, security, and speed.
