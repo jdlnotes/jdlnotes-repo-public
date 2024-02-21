@@ -12,8 +12,15 @@ Home FamilyShield OpenDNS:
 208.67.222.123
 208.67.220.123
 
-Test if working: https://welcome.opendns.com/oops/
+Test if working: https://welcome.opendns.com
+
+Standard DNS: https://doh.opendns.com/dns-query
+
+FamilyShield (blocks adult content): https://doh.familyshield.opendns.com/dns-query
+
+https://support.opendns.com/hc/en-us/articles/360038086532-Using-DNS-over-HTTPS-DoH-with-OpenDNS
+
 
 Quad9 DNS (9.9.9.9 and 149.112.112.112)
 
-These public DNS servers are known for their reliability, security, and speed.
+PLDT HOME / SMARTBRO - 10.86.250.75

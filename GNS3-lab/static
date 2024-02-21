@@ -1,0 +1,13 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens32:
+      addresses:
+        - 192.168.1.149/24
+      routes:
+        - to: default
+          via: 192.168.1.1
+      nameservers:
+         search: [mydomain, otherdomain]
+          addresses: [208.67.222.123,208.67.220.123]
