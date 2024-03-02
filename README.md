@@ -1,1 +1,0 @@
-# jdlnotes-repo-public
