@@ -1,13 +1,13 @@
 
 
-/etc/motd - Login Banner
-/etc/hosts -- HOSTFILE
-/etc/hostname -- HOSTNAME
-/etc/resolv.conf - DNS config
-/etc/ssh/sshd_config - SSH config
-lsb_release -a - check OS version
-sudo lsof -nP -iTCP -sTCP:LISTEN -- Check listening ports
-sudo netstat -tulpn | grep <PORT#> - Check listening port
+/etc/motd # Login_Banner
+/etc/hosts #HOSTFILE
+/etc/hostname #HOSTNAME
+/etc/resolv.conf #DNS_config
+/etc/ssh/sshd_config #SSH_config
+lsb_release -a #check_OS_version
+sudo lsof -nP -iTCP -sTCP:LISTEN  #Check_listening_ports
+sudo netstat -tulpn | grep <PORT#> #Check_listening_port
 sudo apt-get purge thunderbird*
 sudo apt-get autoremove --purge pidgin
 sudo apt-get remove --purge "libreoffice*"
